@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from habitat.views import estadoAnimal
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('estadoAnimal/', estadoAnimal),
 ]
