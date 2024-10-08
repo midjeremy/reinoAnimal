@@ -25,9 +25,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 SECRET_KEY = os.environ.get("SECRET_KEY", default='kljasdlkasdkljasdlkj')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://reinoanimal.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNA_HOSTNAME")
 if RENDER_EXTERNAL_HOSTNAME:
@@ -125,10 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-if not DEBUG:
-    STATIC_ROOT = [os.path.join(BASE_DIR,'static')]
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
