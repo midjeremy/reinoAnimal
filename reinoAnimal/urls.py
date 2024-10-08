@@ -20,5 +20,5 @@ from habitat.views import estadoAnimal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('estadoAnimal/', estadoAnimal),
+    path('', estadoAnimal),
 ]
