@@ -3,7 +3,7 @@ import random
 # Create your views here.
 
 
-#Funcion del Estado de los animales del Zoologico
+#Funcion del Estado de los animales del Zoologico (Es temporal hasta lograr una conexion con la db, se usara como maqueta)
 def estadoAnimal (request):
     #Listas
     animalList = ["Tigre", "Pinguino", "Jirafa", "Elefante"]
@@ -20,4 +20,7 @@ def estadoAnimal (request):
             "Estado" : estado}
     
     #Se realiza la
-    return render(request, 'ReinoATemplates/estadosAnimal.html', data)
+    return render(request, 'estadosAnimal.html', data)
+
+def index(request):
+    return render(request, "index.html",)
