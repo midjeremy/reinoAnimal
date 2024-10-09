@@ -28,7 +28,7 @@ SECRET_KEY = 'l;kasdl;kasd;lkasd;lasd;lk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1'.split(',')]
+ALLOWED_HOSTS = ['127.0.0.1, reinoanimal.onrender.com'.split(',')]
 
 
 
